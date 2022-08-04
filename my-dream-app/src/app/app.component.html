@@ -493,7 +493,9 @@
   <div *ngIf="showHobbies" class="component2">
     <h3>hobbies:</h3>
     <ul>
-      <li *ngFor="let hobby of hobbies">{{ hobby }}</li>
+      <li *ngFor="let user of users">
+        <app-user [nameUser] = "user"></app-user>
+      </li>
     </ul>
   </div>
   <form (submit) = "newHobby(hobby)">
