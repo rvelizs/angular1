@@ -490,10 +490,10 @@
   <h2>{{ name }}</h2>
   <h2>{{ email }}</h2>
 
-  <button (click)="toggleHobbies()" class="btn">Mostrar Hobbies</button>
+  <button (click)="toggleHobbies()" class="btn">Mostrar Usuarios</button>
 
   <div *ngIf="showHobbies" class="component2">
-    <h3>hobbies:</h3>
+    <h3>Usuarios:</h3>
     <ul>
       <li *ngFor="let user of users">
         {{ user }} <button (click) = "deleteUser(user)">Borrar Usuario</button>
@@ -502,8 +502,10 @@
     <button (click) = "sayHello()">Hazme click</button>
   </div>
 
-  <form (submit) = "newHobby(hobby)">
-    <input #hobby type="text" placeholder="hobby">
+  <h1>Desde app.component</h1>
+  <form (submit) = "addUser(newUser)">
+    <input #hobby type="text" #newUser>
+    <button>Agregar Usuario</button>
   </form>
 
   <a href="{{ webpage }}" target="_blank">Visita mi sitio Web</a>

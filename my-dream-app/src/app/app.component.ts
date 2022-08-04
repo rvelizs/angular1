@@ -28,14 +28,15 @@ export class AppComponent {
     this.showHobbies =! this.showHobbies;
   }
 
-  newHobby(hobby : any) {
-    this.hobbies.push(hobby.value);
-    hobby.value = "";
-    return false;
+    sayHello() {
+    alert("Hola desde app.component");
   }
 
-  sayHello() {
-    alert("Hola desde app.component");
+  addUser(newUser : any) {
+    this.users.push(newUser.value);
+    newUser.value = "";
+    newUser.focus();
+    return false;
   }
 
   deleteUser(user : any) {
