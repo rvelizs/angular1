@@ -496,6 +496,9 @@
       <li *ngFor="let hobby of hobbies">{{ hobby }}</li>
     </ul>
   </div>
+  <form (submit) = "newHobby(hobby)">
+    <input #hobby type="text" placeholder="hobby">
+  </form>
   <a href="{{ webpage }}" target="_blank">Visita mi sitio Web</a>
 </div>
 <div class="black">
