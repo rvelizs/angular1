@@ -495,7 +495,9 @@
   <div *ngIf="showHobbies" class="component2">
     <h3>hobbies:</h3>
     <ul>
-      <app-user *ngFor="let user of users" [nameUser] = "user"></app-user>
+      <li *ngFor="let user of users">
+        {{ user }} <button (click) = "deleteUser(user)">Borrar Usuario</button>
+      </li>
     </ul>
     <button (click) = "sayHello()">Hazme click</button>
   </div>
