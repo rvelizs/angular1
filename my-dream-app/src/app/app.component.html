@@ -489,21 +489,26 @@
 <div class="ash">
   <h2>{{ name }}</h2>
   <h2>{{ email }}</h2>
+
   <button (click)="toggleHobbies()" class="btn">Mostrar Hobbies</button>
+
   <div *ngIf="showHobbies" class="component2">
     <h3>hobbies:</h3>
     <ul>
-      <li *ngFor="let user of users">
-        <app-user [nameUser] = "user"></app-user>
-      </li>
+      <app-user *ngFor="let user of users" [nameUser] = "user"></app-user>
     </ul>
+    <button (click) = "sayHello()">Hazme click</button>
   </div>
+
   <form (submit) = "newHobby(hobby)">
     <input #hobby type="text" placeholder="hobby">
   </form>
+
   <a href="{{ webpage }}" target="_blank">Visita mi sitio Web</a>
+  
   <app-hello-world>Aquí</app-hello-world>
 </div>
+
 <div class="black">
   <h1> {{ title }} </h1>
 </div>
